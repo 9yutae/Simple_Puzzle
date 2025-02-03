@@ -1,4 +1,4 @@
-#include "BlinkSpawner.h"
+ï»¿#include "BlinkSpawner.h"
 #include "Simple_Puzzle/Public/BlinkActor.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "TimerManager.h"
@@ -13,7 +13,7 @@ void ABlinkSpawner::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// 2ÃÊ ¸¶´Ù BlinkActor ½ºÆù
+	// 2ì´ˆ ë§ˆë‹¤ BlinkActor ìŠ¤í°
 	GetWorldTimerManager().SetTimer(SpawnTimerHandle, this, &ABlinkSpawner::SpawnBlinkActor, 2.0f, true);
 	
 }
@@ -23,7 +23,7 @@ void ABlinkSpawner::SpawnBlinkActor()
     UWorld* World = GetWorld();
     if (!World) return;
 
-    // ÃÊ±â À§Ä¡, È¸ÀüÀº Zero·Î ¼³Á¤ ÈÄ Blink ÇÔ¼ö¿¡¼­ ·£´ı À§Ä¡ ÁöÁ¤
+    // ì´ˆê¸° ìœ„ì¹˜, íšŒì „ì€ Zeroë¡œ ì„¤ì • í›„ Blink í•¨ìˆ˜ì—ì„œ ëœë¤ ìœ„ì¹˜ ì§€ì •
     FVector SpawnLocation = FVector::ZeroVector;
     FRotator SpawnRotation = FRotator::ZeroRotator;
 

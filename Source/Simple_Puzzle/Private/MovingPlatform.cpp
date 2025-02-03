@@ -1,4 +1,4 @@
-#include "MovingPlatform.h"
+﻿#include "MovingPlatform.h"
 
 AMovingPlatform::AMovingPlatform()
 {

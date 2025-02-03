@@ -1,4 +1,4 @@
-#include "RotatingPlatform.h"
+﻿#include "RotatingPlatform.h"
 
 ARotatingPlatform::ARotatingPlatform()
 {
