@@ -29,6 +29,7 @@ AMovingPlatform::AMovingPlatform()
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
+
 	StartLocation = GetActorLocation();
 	Velocity *= -1;
 }
