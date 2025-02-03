@@ -18,7 +18,7 @@ ABlinkActor::ABlinkActor()
 		StaticMeshComp->SetStaticMesh(MeshAsset.Object);
 	}
 
-	static ConstructorHelpers::FObjectFinder<UMaterial> MaterialAsset(TEXT("/Game/Resources/Materials/M_Star.M_Star"));
+	static ConstructorHelpers::FObjectFinder<UMaterial> MaterialAsset(TEXT("/Game/Resources/Materials/M_Power_Sphere.M_Power_Sphere"));
 	if (MaterialAsset.Succeeded())
 	{
 		StaticMeshComp->SetMaterial(0, MaterialAsset.Object);

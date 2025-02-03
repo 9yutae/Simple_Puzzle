@@ -25,10 +25,13 @@ protected:
 	FVector StartLocation;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MovingPlatform|Movement")
-	FVector Velocity;
+	FVector Destination;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MovingPlatform|Movement")
-	FVector MaxRange;
+	float VelocityMultiplier;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "MovingPlatform|Movement")
+	FVector Velocity;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MovingPlatform|Movement")
 	float Threshold;

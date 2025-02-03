@@ -27,7 +27,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MovingPlatform|Movement")
 	float Radius;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "MovingPlatform|Movement")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MovingPlatform|Movement")
 	float Radian;
 
 protected:

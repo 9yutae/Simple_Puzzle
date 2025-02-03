@@ -22,7 +22,6 @@ ARotatingPlatform::ARotatingPlatform()
 		StaticMeshComp->SetMaterial(0, MaterialAsset.Object);
 	}
 
-	StartLocation = FVector::ZeroVector;
 	RotationSpeed = 1.0f;
 	Radius = 100.0f;
 }
@@ -31,6 +30,7 @@ void ARotatingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	StartLocation = GetActorLocation();
 }
 
 void ARotatingPlatform::Tick(float DeltaTime)
@@ -41,8 +41,8 @@ void ARotatingPlatform::Tick(float DeltaTime)
 	if (Radian > 2 * PI)
 		Radian -= 2 * PI;
 
-	FVector newLocation = FVector(FMath::Cos(Radian) * Radius,
-		FMath::Sin(Radian) * Radius, GetActorLocation().Z);
+	FVector newLocation = FVector(StartLocation.X + FMath::Cos(Radian) * Radius,
+		StartLocation.Y + FMath::Sin(Radian) * Radius, GetActorLocation().Z);
 	SetActorLocation(newLocation);
 }
 
